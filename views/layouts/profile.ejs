@@ -1,0 +1,29 @@
+<% if (typeof(scores) !== 'undefined') { %>
+    <ul>
+        <% scores.forEach(score => { %>
+            <h3><%= score.band %></h3>
+            <h3><%= score.song %></h3>
+            <h3 class="hyperlink"><a href="<%= score.link %>">Play song</a></h3>
+            <% score.tag.forEach(tag => { %>
+                <p><%= tag %></p><form action="/deletemusic/<%= score._id %>/<%= tag %>" method="POST"><button name="tagDel" value="<%= tag %>" type="submit">Delete</button> </form>
+            <% }) %>
+                    <form id=`form` action="/addtag/<%= score._id %>/<%= siteTag %>" method="post">
+                        <label for="name">Tag name</label>
+                        <input type="text" name="name" id="name">
+                        <button type="submit">submit</button>
+                    </form>
+            <hr>
+        <% }) %>
+    </ul>
+<% } %>
+
+<script>
+    function toggleForm() {
+        const form = document.getElementById('form');
+        if (form.style.display === "none") {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+    }
+</script>

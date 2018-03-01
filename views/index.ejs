@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+    <% if(typeof(user) !== "undefined"){ %>
+      <ul class="catfont">
+        <li><a class="mature"  href="/findmusic/Mature">Mature</a></li>
+        <li><a class="noir"  href="/findmusic/Noir">Noir</a></li>
+        <li><a class="dystopia"  href="/findmusic/Dystopia">Dystopia</a></li>
+        <li><a class="futuristic"    href="/findmusic/Futuristic">Futuristic</a></li>
+
+      </ul>
+
+      <ul class="catfont">
+        <li><a class="platformer"    href="/findmusic/Platformer">Platformer</a></li>
+        <li><a class="shootemup" href="/findmusic/Shootemup">Shoot 'em up</a></li>
+        <li><a class="beatemup"  href="/findmusic/Beatemup">Beat 'em up</a></li>
+        <li><a class="utopia"  href="/findmusic/Utopia">Utopia</a></li>
+
+      </ul>
+
+      <ul class="catfont">
+    <li><a class="puzzle"  href="/findmusic/Puzzle">Puzzle</a></li>
+    <li><a class="relaxing"  href="/findmusic/Relaxing">Relaxing</a></li>
+    <li><a class="violent"  href="/findmusic/Violent">Violent</a></li>
+    <li><a class="fast-paced"  href="/findmusic/Fast-paced">Fast-paced</a><li>
+
+      </ul>
+    
+      <ul class="catfont">
+    <li><a class="creative"  href="/findmusic/Creative">Creative</a></li>
+    <li><a class="driving"  href="/findmusic/Driving">Driving</a></li>
+
+      </ul>
+
+    <% } %>
+ 
+
+    <div class="container-fluid">
+      <div class="home-heading text-center row">
+        <div class="home-heading-wrapper">
+
+          <h1>
+              <!-- <img class="nav-logo-image" src="../images/IndieScoreLogo.png" alt="Indie Score Logo"> -->
+          </h1>
+          <h2>Inspire Your Game.</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- Mature
+Cyberpunk
+Driving
+Utopia
+Platformer
+Puzzle
+Relaxing
+Violent
+Noir
+Fast-paced
+Dystopia
+Colorful -->
