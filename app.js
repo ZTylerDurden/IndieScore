@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+require("dotenv").config();
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -18,7 +19,7 @@ const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('./models/user');
 const bcrypt             = require('bcrypt');
 
-mongoose.connect('mongodb://localhost:27017/indiescore-project');
+mongoose.connect(process.env.MONGODB_URI);
 
 var profileRoute = require('./routes/profile')
 var index = require('./routes/index');
